@@ -162,35 +162,40 @@ header {
     }
   }
   nav {
-    display: flex;
-    padding: 10px 0 !important;
-    align-items: center;
-    justify-content: space-between;
-    .nav_left {
+    .section-container {
       display: flex;
+      padding: 10px 0 !important;
       align-items: center;
-      gap: 20px;
-      ul {
+      justify-content: space-between;
+      .nav_left {
         display: flex;
-        list-style: none;
-        li {
-          padding: 0 10px;
-          a {
-            transition: var(--transition-fast);
-            &:hover {
-              color: var(--color-accent);
+        align-items: center;
+        gap: 20px;
+        ul {
+          display: flex;
+          list-style: none;
+          li {
+            padding: 0 10px;
+            a {
+              transition: var(--transition-fast);
+              &:hover {
+                color: var(--color-accent);
+              }
             }
           }
         }
       }
-    }
-    .nav_toggle {
-      display: none;
+      .nav_toggle {
+        display: none;
+      }
     }
   }
 }
 
 /* ================ home hero_section========== */
+main {
+  height: 200vh;
+}
 #hero_section {
   background-image: linear-gradient(
       180deg,
@@ -201,7 +206,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   .section-container {
-    padding-block: 50px;
+    padding-block: 90px;
     padding-block-end: 0;
     .hero_section_top {
       width: 60%;
@@ -221,15 +226,27 @@ header {
         align-items: center;
         justify-content: center;
         gap: 5px;
+        overflow: hidden;
         img {
           width: 30px;
           margin-bottom: 0;
+        }
+        .words {
+          text-align: left;
+          height: 25px;
+          margin: 0;
+          display: grid;
+          overflow: hidden;
+          > * {
+            display: block;
+          }
         }
       }
       h1 {
         font-size: 2.5rem;
         line-height: 1.2;
         margin: 0;
+        overflow: hidden;
       }
       p {
         font-size: 1.2rem;
@@ -377,12 +394,14 @@ header {
       }
     }
     nav {
-      .nav_left {
-        display: none;
-      }
-      .nav_toggle {
-        display: inline-block;
-        width: 60px;
+      .section-container {
+        .nav_left {
+          display: none;
+        }
+        .nav_toggle {
+          display: inline-block;
+          width: 60px;
+        }
       }
     }
   }
