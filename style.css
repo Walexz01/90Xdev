@@ -356,6 +356,66 @@ main {
   }
 }
 
+/* ===================== Trust Text Section =====================  */
+#trust_section {
+  .section-container {
+    .trust_section_top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      h2 {
+        font-size: 2rem;
+        margin-top: 0;
+        span {
+          font-family: var(--font-code);
+          color: var(--color-accent-alt);
+        }
+      }
+      p {
+        margin-top: 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+    }
+    .trust_section_bottom {
+      .trust_stats {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-medium);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 30px;
+        padding-block: 20px;
+        .stat {
+          cursor: pointer;
+          padding-inline: 20px;
+          border-right: 1px solid var(--color-border);
+          h3 {
+            color: var(--color-text-secondary);
+            font-weight: 400;
+            font-family: var(--font-code);
+            font-size: 1.1rem;
+          }
+          p {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 5px;
+            align-items: center;
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--color-black);
+            img {
+              width: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* ============= media query for 1024px=============== */
 @media (width<= 1024px) {
   /* ================ header============= */
