@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let Herosection_tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".hero_section_top",
-        start: "top 40%",
+        start: "top 50%",
         ease: "expoScale(0.5,7,none)",
         delay: 5,
       },
