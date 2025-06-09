@@ -95,6 +95,11 @@ button {
   background-color: #2563eb;
   color: var(--color-black);
 }
+.btn.light_hover:hover {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
 
 /* ================ header============= */
 header {
@@ -411,6 +416,59 @@ main {
             }
           }
         }
+      }
+    }
+  }
+}
+/* =================== Mini About Section=========== */
+#Mini_About_Section {
+  .section-container {
+    padding-block-start: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    .mini_about_left {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .mini_about_right {
+      h2 {
+        font-size: 2rem;
+        span {
+          position: relative;
+          &::before {
+            content: url("assets/Ellipse.svg");
+            position: absolute;
+            /* scale: 0.6; */
+            left: -5px;
+            top: -10px;
+          }
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+      ul {
+        padding: 0;
+        padding-bottom: 20px;
+
+        li {
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+          gap: 5px;
+          padding-top: 5px;
+          img {
+            width: 30px;
+          }
+        }
+      }
+      a {
+        font-size: 1.1rem;
+        padding: 10px 20px;
       }
     }
   }
