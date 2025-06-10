@@ -425,6 +425,7 @@ main {
 #Mini_About_Section {
   .section-container {
     padding-block-start: 20px;
+    padding-block-end: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -498,7 +499,6 @@ main {
 }
 #process {
   .section-container {
-    padding-block-start: 20px !important;
     .process_bottom {
       padding-top: 30px;
       .process_cards {
@@ -697,6 +697,42 @@ main {
       }
     }
   }
+  /* =================== Process Section===========  */
+  .section_header {
+    width: 80%;
+    h2 {
+      margin: 0;
+      font-size: 1.7rem;
+      font-family: var(--font-code);
+    }
+    p {
+      margin-top: 5px;
+      font-size: 1.1rem;
+    }
+  }
+  #process {
+    .section-container {
+      .process_bottom {
+        .process_cards {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          .process_card {
+            padding: 40px 20px;
+            img {
+              width: 60px;
+              margin-top: -60px;
+            }
+            h3 {
+              font-size: 1.1rem;
+            }
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* ============= media query for 890px=============== */
@@ -860,6 +896,39 @@ main {
       }
     }
   }
+  /* =================== Process Section===========  */
+  .section_header {
+    width: 85%;
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  #process {
+    .section-container {
+      .process_bottom {
+        .process_cards {
+          padding-top: 10px;
+          grid-template-columns: repeat(2, 1fr);
+          .process_card {
+            padding: 40px 20px;
+            img {
+              width: 60px;
+              margin-top: -60px;
+            }
+            h3 {
+              font-size: 1.1rem;
+            }
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* ============= media query for 670px=============== */
@@ -947,6 +1016,41 @@ main {
       }
     }
   }
+  /* =================== Process Section===========  */
+  .section_header {
+    width: 90%;
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  #process {
+    .section-container {
+      .process_bottom {
+        .process_cards {
+          padding-top: 10px;
+          grid-template-columns: 1fr;
+          justify-items: center;
+          .process_card {
+            width: 70%;
+            padding: 40px 20px;
+            img {
+              width: 60px;
+              margin-top: -60px;
+            }
+            h3 {
+              font-size: 1.1rem;
+            }
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* ============= media query for 545px=============== */
@@ -973,6 +1077,41 @@ main {
       }
     }
   }
+  /* =================== Process Section===========  */
+  .section_header {
+    width: 95%;
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  #process {
+    .section-container {
+      .process_bottom {
+        .process_cards {
+          padding-top: 10px;
+          grid-template-columns: 1fr;
+          justify-items: center;
+          .process_card {
+            width: 80%;
+            padding: 40px 20px;
+            img {
+              width: 60px;
+              margin-top: -60px;
+            }
+            h3 {
+              font-size: 1.1rem;
+            }
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 /* ============= media query for 480px=============== */
 @media (width<= 480px) {
@@ -985,35 +1124,31 @@ main {
       }
     }
   }
-}
-
-/* ============= media query for 435px=============== */
-@media (width<= 435px) {
-  #Mini_About_Section {
+  /* =================== Process Section===========  */
+  .section_header {
+    width: 100%;
+    h2 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  #process {
     .section-container {
-      .mini_about_left {
-        img {
-          scale: 1;
-        }
-      }
-      .mini_about_right {
-        h2 {
-          font-size: 1.5rem;
-          span {
-            &::before {
-              scale: 0.8;
-              left: -20px;
-              top: -15px;
-            }
+      .process_bottom {
+        .process_cards {
+          padding-top: 10px;
+          .process_card {
+            width: 90%;
+            padding: 40px 20px;
           }
-        }
-        p {
-          font-size: 1rem;
         }
       }
     }
   }
 }
+
 /* ============= media query for 450px=============== */
 @media (width<= 450px) {
   #hero_section {
@@ -1097,6 +1232,45 @@ main {
             &:last-child {
               border-bottom-color: transparent;
             }
+          }
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 435px=============== */
+@media (width<= 435px) {
+  #Mini_About_Section {
+    .section-container {
+      .mini_about_left {
+        img {
+          scale: 1;
+        }
+      }
+      .mini_about_right {
+        h2 {
+          font-size: 1.5rem;
+          span {
+            &::before {
+              scale: 0.8;
+              left: -20px;
+              top: -15px;
+            }
+          }
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  /* =================== Process Section===========  */
+  #process {
+    .section-container {
+      .process_bottom {
+        .process_cards {
+          .process_card {
+            width: 98%;
           }
         }
       }
