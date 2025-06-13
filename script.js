@@ -102,5 +102,111 @@ document.addEventListener("DOMContentLoaded", (event) => {
       "tag"
     );
     //end of home hero
+    // service animation start
+    const serviceImg = document.querySelector(".services_right img");
+    const service = document.querySelector(".services_right");
+    function updateServiceImage(index) {
+      const servicebg_color = [
+        "#3b82f6",
+        "#f7bc03",
+        "#1ab8fe",
+        "#9402c4",
+        "#d9efff",
+      ];
+      const serviceText = [
+        "Custom Website Design",
+        "Landing Pages That Convert",
+        "E-commerce Development",
+        "Website Redesigns",
+        "Ongoing Maintenance",
+      ];
+      const serviceImage = [
+        "assets/CustomWebsiteDesign.jpg",
+        "assets/LandingPagesThatConvert.jpg",
+        "/assets/eCommerceDevelopment.jpg",
+        "assets/WebsiteRedesigns.jpg",
+        "assets/OngoingMaintenance.jpg",
+      ];
+
+      serviceImg.src = serviceImage[index];
+      serviceImg.alt = serviceText[index];
+      const styleElement = document.createElement("style");
+      styleElement.textContent = `
+          .services_right::before {
+              content: "";
+              background-color: ${servicebg_color[index]} !important;
+          }
+      `;
+      document.head.appendChild(styleElement);
+    }
+    let service_texts = gsap.utils.toArray(".services_text .service");
+    console.log(service_texts);
+    let serviceSection_tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".service_bottom",
+        start: "top 0%",
+        end: "top 50%",
+        ease: "expoScale(0.5,7,none)",
+        delay: 1,
+        onEnter: () => {
+          gsap.set(".services_right", {
+            position: "fixed",
+            bottom: "20%",
+            right: "20px",
+          });
+        },
+        onEnterBack: () => {
+          gsap.set(".services_right", {
+            position: "relative",
+            bottom: "0",
+          });
+          gsap.set(".services", {
+            alignItems: "start",
+          });
+        },
+      },
+    });
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".services_text",
+        start: "bottom 70%",
+        end: "bottom 70%",
+        scrub: 2,
+        ease: "ease",
+
+        onLeave: () => {
+          gsap.set(".services_right", {
+            // opacity: 0,
+            position: "relative",
+            // bottom: "0",
+          });
+          gsap.set(".services", {
+            alignItems: "end",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.set(".services_right", {
+            position: "fixed",
+            bottom: "20%",
+            right: "0",
+          });
+        },
+      },
+    });
+    service_texts.forEach((texts, i) => {
+      ScrollTrigger.create({
+        trigger: texts,
+        start: "top 50%",
+        end: "top 20%",
+        markers: true,
+        onEnter: () => {
+          updateServiceImage(i);
+        },
+        onEnterBack: () => {
+          updateServiceImage(i);
+        },
+      });
+    });
+    // service animation end
   });
 });
