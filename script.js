@@ -208,5 +208,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
     });
     // service animation end
+    // footer year
+    const Footeryear = document.querySelector(".year");
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    Footeryear.textContent = year;
   });
 });
