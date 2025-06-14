@@ -198,7 +198,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: texts,
         start: "top 50%",
         end: "top 20%",
-        markers: true,
         onEnter: () => {
           updateServiceImage(i);
         },
