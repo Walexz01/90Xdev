@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       const serviceImage = [
         "assets/CustomWebsiteDesign.jpg",
         "assets/LandingPagesThatConvert.jpg",
-        "/assets/eCommerceDevelopment.jpg",
+        "assets/eCommerceDevelopment.jpg",
         "assets/WebsiteRedesigns.jpg",
         "assets/OngoingMaintenance.jpg",
       ];
@@ -207,6 +207,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
     });
     // service animation end
+    // ============= project list animation====
+    let project_img_lists = gsap.utils.toArray(".project_list_imgs");
+
+    project_img_lists.forEach((list) => {
+      const list_img_array = list.querySelectorAll(".list_img");
+
+      list_img_array.forEach((list_img) => {
+        gsap.to(list_img, {
+          y: -100,
+          duration: 2,
+          scrollTrigger: {
+            trigger: list_img,
+            start: "top 70%",
+            end: "bottom 20%",
+            scrub: 4,
+          },
+        });
+      });
+    });
+
     // footer year
     const Footeryear = document.querySelector(".year");
     const currentDate = new Date();
