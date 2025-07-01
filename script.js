@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           gsap.set(".services_right", {
             // opacity: 0,
             position: "relative",
-            // bottom: "0",
+            bottom: "5%",
           });
           gsap.set(".services", {
             alignItems: "end",
