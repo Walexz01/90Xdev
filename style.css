@@ -187,6 +187,16 @@ header {
       padding: 10px 0 !important;
       align-items: center;
       justify-content: space-between;
+      .nav_logo {
+        a {
+          display: flex;
+          align-items: center;
+          img {
+            width: 150px;
+            height: auto;
+          }
+        }
+      }
       .nav_left {
         display: flex;
         align-items: center;
@@ -213,9 +223,6 @@ header {
 }
 
 /* ================ home hero_section========== */
-main {
-  height: 200vh;
-}
 #hero_section {
   background-image: linear-gradient(
       180deg,
@@ -225,6 +232,7 @@ main {
     url(assets/background_grid.png);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
   .section-container {
     padding-block: 90px;
     padding-block-end: 0;
@@ -476,7 +484,7 @@ main {
 .green {
   color: var(--color-accent-alt);
 }
-.section_header {
+.servicepage_header {
   text-align: center;
   width: 70%;
   margin: 0 auto;
@@ -526,18 +534,39 @@ main {
     }
   }
 }
+#section_header {
+  width: 70%;
+  h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  p {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+  }
+  a {
+    color: var(--color-black);
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 30px;
+      rotate: -45deg;
+      transition: var(--transition-smooth);
+    }
+    &:hover {
+      color: var(--color-accent-alt);
+      img {
+        rotate: 0deg;
+      }
+    }
+  }
+}
 /* ========== service_section ========== */
 .service_section {
   .section-container {
-    .service_top {
-      h2 {
-        a {
-          text-decoration: underline;
-          text-decoration-color: var(--color-border);
-          text-decoration-thickness: 3px;
-        }
-      }
-    }
     .service_bottom_cards {
       .service_cards {
         row-gap: 50px !important;
@@ -545,17 +574,17 @@ main {
     }
   }
 }
-/* ================== ============ */
+/* =============================== service page========================== */
 #service_section {
   overflow-x: hidden;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(249, 240, 255, 1) 37%,
     var(--color-bg) 88%
   );
-  border-radius: 5% 5% 0 0;
+  border-radius: 5% 5% 0 0; */
   .section-container {
-    /* padding-block-start: 120px; */
+    padding-block-start: 120px;
     .service_top {
       h2 {
         font-size: 2.5rem;
@@ -628,39 +657,10 @@ main {
     }
   }
 }
+
 /* project section */
 .project_section {
   .section-containers {
-    & #project_top {
-      width: 70%;
-      h2 {
-        font-size: 2.5rem;
-        margin: 0;
-      }
-      p {
-        font-size: 1.2rem;
-        color: var(--color-text-secondary);
-      }
-      a {
-        color: var(--color-black);
-        font-size: 1.2rem;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        img {
-          width: 30px;
-          rotate: -45deg;
-          transition: var(--transition-smooth);
-        }
-        &:hover {
-          color: var(--color-accent-alt);
-          img {
-            rotate: 0deg;
-          }
-        }
-      }
-    }
     .project_lists {
       & .project_list_imgs {
         display: flex;
@@ -977,7 +977,7 @@ footer {
     }
   }
   /* =================== Process Section===========  */
-  .section_header {
+  .servicepage_header {
     width: 80%;
     h2 {
       margin: 0;
@@ -1012,14 +1012,10 @@ footer {
       }
     }
   }
-  /* project section */
-  .project_section {
-    .section-containers {
-      & #project_top {
-        width: 80%;
-      }
-    }
+  #section_header {
+    width: 80%;
   }
+  /* project section */
   /* ============== contact section=========== */
 
   #contact_section {
@@ -1185,17 +1181,14 @@ footer {
       }
     }
   }
-  /* project section */
-  .project_section {
-    .section-containers {
-      & #project_top {
-        width: 90%;
-        h2 {
-          font-size: 2.2rem;
-        }
-      }
+  #section_header {
+    width: 90%;
+    h2 {
+      font-size: 2.2rem;
     }
   }
+  /* project section */
+
   /* ============== contact section=========== */
 
   #contact_section {
@@ -1251,7 +1244,7 @@ footer {
     }
   }
   /* =================== Process Section===========  */
-  .section_header {
+  .servicepage_header {
     width: 85%;
     h2 {
       font-size: 1.5rem;
@@ -1324,26 +1317,23 @@ footer {
       }
     }
   }
-  /* project section */
-  .project_section {
-    .section-containers {
-      & #project_top {
-        width: 90%;
-        h2 {
-          font-size: 2.2rem;
-        }
-        p {
-          font-size: 1.1rem;
-        }
-        a {
-          font-size: 1.1rem;
-          img {
-            width: 25px;
-          }
-        }
+  #section_header {
+    width: 90%;
+    h2 {
+      font-size: 2.2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    a {
+      font-size: 1.1rem;
+      img {
+        width: 25px;
       }
     }
   }
+  /* project section */
+
   /* ============== contact section=========== */
 
   #contact_section {
@@ -1464,7 +1454,7 @@ footer {
     }
   }
   /* =================== Process Section===========  */
-  .section_header {
+  .servicepage_header {
     width: 90%;
     h2 {
       font-size: 1.5rem;
@@ -1498,26 +1488,22 @@ footer {
       }
     }
   }
-  /* project section */
-  .project_section {
-    .section-containers {
-      & #project_top {
-        width: 99%;
-        h2 {
-          font-size: 2rem;
-        }
-        p {
-          font-size: 1.1rem;
-        }
-        a {
-          font-size: 1.1rem;
-          img {
-            width: 25px;
-          }
-        }
+  #section_header {
+    width: 99%;
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    a {
+      font-size: 1.1rem;
+      img {
+        width: 25px;
       }
     }
   }
+  /* project section */
 }
 
 /* ============= media query for 545px=============== */
@@ -1545,7 +1531,7 @@ footer {
     }
   }
   /* =================== Process Section===========  */
-  .section_header {
+  .servicepage_header {
     width: 95%;
     h2 {
       font-size: 1.5rem;
@@ -1583,6 +1569,7 @@ footer {
   .project_section {
     .section-containers {
       .project_lists {
+        padding-top: 30px;
         & .project_list_imgs {
           display: flex;
           flex-wrap: wrap;
@@ -1647,7 +1634,7 @@ footer {
     }
   }
   /* =================== Process Section===========  */
-  .section_header {
+  .servicepage_header {
     width: 100%;
     h2 {
       font-size: 1.3rem;
