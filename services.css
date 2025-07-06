@@ -1,0 +1,498 @@
+/* =============================== service page========================== */
+
+#service_section {
+  overflow-x: hidden;
+  .section-container {
+    padding-block-start: 120px;
+    .service_top {
+      h2 {
+        font-size: 2.5rem;
+        span {
+          position: relative;
+          &::before {
+            content: url("assets/Ellipse.svg");
+            position: absolute;
+            left: 7px;
+            scale: 1.3;
+            top: 0px;
+          }
+        }
+      }
+    }
+    .service_bottom {
+      padding-top: 150px;
+      .services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 30px;
+        .services_left {
+          width: 90%;
+          .services_text {
+            .service {
+              margin-bottom: 180px;
+              h2 {
+                margin: 0;
+                font-size: 2rem;
+                color: var(--color-text-secondary);
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                img {
+                  width: 30px;
+                }
+              }
+              h3 {
+                font-family: var(--font-code);
+                font-size: 1.2rem;
+              }
+              p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+              }
+              .service_img {
+                display: none;
+              }
+            }
+          }
+        }
+        .services_right {
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            background-color: var(--color-accent);
+            border-radius: 50% 40% 0;
+            top: -80px;
+            right: -90px;
+          }
+          img {
+            position: relative;
+            width: 600px;
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ============= media query for 1280px=============== */
+@media (width<= 1280px) {
+  #service_section {
+    .section-container {
+      .service_top {
+        h2 {
+          font-size: 2.5rem;
+          span {
+            &::before {
+              left: 7px;
+              scale: 1.3;
+              top: 0px;
+            }
+          }
+        }
+      }
+      .service_bottom {
+        .services {
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          .services_left {
+            width: 100%;
+            .services_text {
+              .service {
+                h2 {
+                  font-size: 1.7rem;
+                  img {
+                    width: 25px;
+                  }
+                }
+                h3 {
+                  font-size: 1.2rem;
+                }
+                p {
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+          .services_right {
+            &::before {
+              width: 500px;
+              height: 400px;
+              top: -80px;
+              right: -90px;
+            }
+            img {
+              position: relative;
+              width: 500px;
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 1024px=============== */
+@media (width<= 1024px) {
+  #service_section {
+    .section-container {
+      .service_top {
+        width: 85%;
+        h2 {
+          font-size: 2rem;
+          span {
+            &::before {
+              left: -6px;
+              scale: 1.08;
+              top: -5px;
+            }
+          }
+        }
+      }
+      .service_bottom {
+        .services {
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          .services_left {
+            width: 100%;
+            .services_text {
+              .service {
+                h2 {
+                  font-size: 1.5rem;
+                  img {
+                    width: 25px;
+                  }
+                }
+                h3 {
+                  font-size: 1.1rem;
+                }
+                p {
+                  font-size: 1.1rem;
+                }
+              }
+            }
+          }
+          .services_right {
+            &::before {
+              width: 450px;
+              height: 350px;
+              top: -80px;
+              right: -90px;
+            }
+            img {
+              width: 450px;
+              height: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ============= media query for 920px=============== */
+@media (width<= 920px) {
+  #service_section {
+    .section-container {
+      .service_top {
+        width: 90%;
+        h2 {
+          font-size: 2rem;
+          span {
+            &::before {
+              left: -6px;
+              scale: 1.08;
+              top: -5px;
+            }
+          }
+        }
+      }
+      .service_bottom {
+        .services {
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          .services_left {
+            .services_text {
+              .service {
+                h2 {
+                  font-size: 1.2rem;
+                  img {
+                    width: 20px;
+                  }
+                }
+                h3 {
+                  font-size: 1rem;
+                }
+                p {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+          .services_right {
+            &::before {
+              width: 400px;
+              height: 300px;
+              top: -80px;
+              right: -90px;
+            }
+            img {
+              width: 400px;
+              height: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 920px=============== */
+@media (width<= 920px) {
+  #service_section {
+    .section-container {
+      .service_top {
+        width: 95%;
+        h2 {
+          font-size: 2rem;
+          span {
+            &::before {
+              left: -6px;
+              scale: 1.08;
+              top: -5px;
+            }
+          }
+        }
+      }
+      .service_bottom {
+        padding-top: 70px;
+        .services {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          .services_left {
+            .services_text {
+              .service {
+                width: 70%;
+                margin: 0;
+                h2 {
+                  font-size: 2rem;
+                  img {
+                    width: 30px;
+                  }
+                }
+                h3 {
+                  font-size: 1.2rem;
+                }
+                p {
+                  font-size: 1.1rem;
+                }
+                .service_img {
+                  display: block;
+                  padding-block: 40px;
+                  img {
+                    border-radius: 10px;
+                    box-shadow: var(--shadow-medium);
+                  }
+                }
+              }
+            }
+          }
+          .services_right {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ============= media query for 750px=============== */
+@media (width<= 750px) {
+  #service_section {
+    .section-container {
+      padding-block-end: 0;
+      .service_top {
+        width: 98%;
+        h2 {
+          font-size: 2rem;
+          span {
+            &::before {
+              left: -6px;
+              scale: 1.08;
+              top: -5px;
+            }
+          }
+        }
+      }
+      .service_bottom {
+        padding-top: 70px;
+        .services {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          .services_left {
+            .services_text {
+              .service {
+                width: 90%;
+                h2 {
+                  font-size: 2rem;
+                }
+                h3 {
+                  font-size: 1.2rem;
+                }
+                p {
+                  font-size: 1.1rem;
+                }
+                .service_img {
+                  display: block;
+                  padding-block: 40px;
+                  img {
+                    border-radius: 10px;
+                    box-shadow: var(--shadow-medium);
+                  }
+                }
+              }
+            }
+          }
+          .services_right {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 575px=============== */
+@media (width<= 575px) {
+  #service_section {
+    .section-container {
+      padding-block-end: 0;
+      .service_top {
+        width: 98%;
+        h2 {
+          font-size: 1.8rem;
+          span {
+            &::before {
+              left: -9px;
+              scale: 1;
+              top: -9px;
+            }
+          }
+        }
+      }
+      .service_bottom {
+        padding-top: 70px;
+        .services {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          .services_left {
+            .services_text {
+              .service {
+                width: 98%;
+                margin: auto;
+                h2 {
+                  font-size: 2rem;
+                }
+                h3 {
+                  font-size: 1.1rem;
+                }
+                p {
+                  font-size: 1.1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 515px=============== */
+@media (width<= 515px) {
+  #service_section {
+    .section-container {
+      .service_top {
+        h2 {
+          font-size: 1.5rem;
+          span {
+            &::before {
+              left: -17px;
+              scale: 0.9;
+              top: -14px;
+            }
+          }
+        }
+      }
+      .service_bottom {
+        padding-top: 70px;
+        .services {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          .services_left {
+            .services_text {
+              .service {
+                width: 98%;
+                margin: auto;
+                h2 {
+                  font-size: 1.5rem;
+                }
+                h3 {
+                  font-size: 1rem;
+                }
+                p {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 430px=============== */
+@media (width<= 430px) {
+  #service_section {
+    .section-container {
+      .service_top {
+        h2 {
+          font-size: 1.2rem;
+          span {
+            &::before {
+              left: -30px;
+              scale: 0.7;
+              top: -16px;
+            }
+          }
+        }
+      }
+      .service_bottom {
+        padding-top: 70px;
+        .services {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          .services_left {
+            .services_text {
+              .service {
+                width: 98%;
+                margin: auto;
+                h2 {
+                  font-size: 1.2rem;
+                }
+                h3 {
+                  font-size: 1rem;
+                }
+                p {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

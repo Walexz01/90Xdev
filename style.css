@@ -1,4 +1,5 @@
 @import url(contact.css);
+@import url(services.css);
 :root {
   /* 🔤 Font Families */
   --font-heading: "Sora", sans-serif;
@@ -571,89 +572,6 @@ header {
     .service_bottom_cards {
       .service_cards {
         row-gap: 50px !important;
-      }
-    }
-  }
-}
-/* =============================== service page========================== */
-#service_section {
-  overflow-x: hidden;
-  /* background: linear-gradient(
-    180deg,
-    rgba(249, 240, 255, 1) 37%,
-    var(--color-bg) 88%
-  );
-  border-radius: 5% 5% 0 0; */
-  .section-container {
-    padding-block-start: 120px;
-    .service_top {
-      h2 {
-        font-size: 2.5rem;
-        span {
-          position: relative;
-          &::before {
-            content: url("assets/Ellipse.svg");
-            position: absolute;
-            left: 7px;
-            scale: 1.3;
-            top: 0px;
-          }
-        }
-      }
-    }
-    .service_bottom {
-      padding-top: 150px;
-      .services {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        gap: 30px;
-        .services_left {
-          width: 90%;
-          .services_text {
-            .service {
-              margin-bottom: 180px;
-              h2 {
-                margin: 0;
-                font-size: 2rem;
-                color: var(--color-text-secondary);
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                img {
-                  width: 30px;
-                }
-              }
-              h3 {
-                font-family: var(--font-code);
-                font-size: 1.2rem;
-              }
-              p {
-                font-size: 1.2rem;
-                margin-bottom: 30px;
-              }
-            }
-          }
-        }
-        .services_right {
-          position: relative;
-
-          &::before {
-            content: "";
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            background-color: var(--color-accent);
-            border-radius: 50% 40% 0;
-            top: -80px;
-            right: -90px;
-          }
-          img {
-            position: relative;
-            width: 600px;
-            height: 400px;
-          }
-        }
       }
     }
   }
