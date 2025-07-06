@@ -66,6 +66,7 @@
         flex-direction: column;
         gap: 15px;
         align-items: flex-start;
+        justify-content: space-between;
         img {
           width: 100px;
           margin: 0;
@@ -85,6 +86,7 @@
   }
 }
 #contact_form_section {
+  overflow: hidden;
   .section-container {
     padding: 0;
   }
@@ -119,29 +121,28 @@
           background-color: transparent;
           resize: none;
         }
-        .select_group {
-          label {
-            font-size: 1.1rem;
-          }
+      }
+      .select_group {
+        label {
+          font-size: 1.1rem;
+        }
 
-          #services {
-            padding-top: 10px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            label {
-              color: var(--color-text-secondary);
-            }
-            input[type="checkbox"] {
-              width: 18px;
-              height: 18px;
-              margin-right: 10px;
-              cursor: pointer;
-              accent-color: var(--color-accent-alt);
-            }
-            input[type="checkbox"]:focus {
-              outline: 2px solid var(--color-text-secondary);
-              outline-offset: 2px;
-            }
+        #services {
+          padding-block: 10px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          label {
+            color: var(--color-text-secondary);
+          }
+          input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--color-accent-alt);
+          }
+          input[type="checkbox"]:focus {
+            outline: 2px solid var(--color-text-secondary);
+            outline-offset: 2px;
           }
         }
       }
@@ -155,6 +156,226 @@
     iframe {
       height: 100%;
       width: 100%;
+    }
+  }
+}
+
+/* ============= media query for 1024px=============== */
+@media (width<= 1024px) {
+  #contact_header {
+    .section-container {
+      h1 {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .header_desc {
+        width: 80%;
+        font-size: 1.1rem;
+      }
+      .contact_header_cards {
+        padding-top: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        .contact_header_card {
+          padding: 20px;
+          img {
+            width: 90px;
+          }
+          a {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+  /* =============== form =========== */
+  #contact_form_section {
+    .contact_form_bottom {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      form {
+        .input {
+          label {
+            font-size: 1rem;
+          }
+          input,
+          textarea {
+            padding: 10px 15px;
+            font-size: 1rem;
+          }
+        }
+        .select_group {
+          label {
+            font-size: 1rem;
+          }
+          #services {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        button {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 890px=============== */
+@media (width<= 890px) {
+  #contact_header {
+    .section-container {
+      h1 {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .header_desc {
+        width: 85%;
+        font-size: 1.1rem;
+      }
+      .contact_header_cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        .contact_header_card {
+          padding: 20px;
+          img {
+            width: 80px;
+          }
+          a {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* =============== form =========== */
+  #contact_form_section {
+    .contact_form_bottom {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      form {
+        .select_group {
+          #services {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        button {
+          font-size: 1.1rem;
+        }
+      }
+      iframe {
+        height: 350px;
+      }
+    }
+  }
+}
+/* ============= media query for 800px=============== */
+@media (width<= 800px) {
+  #contact_header {
+    .section-container {
+      .header_desc {
+        width: 90%;
+      }
+      .contact_header_cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+    }
+  }
+}
+/* ============= media query for 670px=============== */
+@media (width<= 670px) {
+  #contact_header {
+    .section-container {
+      .header_desc {
+        width: 95%;
+      }
+      .contact_header_cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+/* ============= media query for 545px=============== */
+@media (width<= 545px) {
+  #contact_header {
+    .section-container {
+      .header_desc {
+        width: 100%;
+      }
+      .contact_header_cards {
+        grid-template-columns: 1fr;
+        .contact_header_card {
+          align-items: center;
+          width: 70%;
+          margin: auto;
+        }
+      }
+    }
+  }
+  /* =============== form =========== */
+  #contact_form_section {
+    .contact_form_bottom {
+      form {
+        .input_group {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 480px=============== */
+@media (width<= 480px) {
+  #contact_header {
+    .section-container {
+      .contact_header_cards {
+        grid-template-columns: 1fr;
+        .contact_header_card {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 450px=============== */
+@media (width<= 450px) {
+  #contact_header {
+    .section-container {
+      .contact_header_cards {
+        grid-template-columns: 1fr;
+        .contact_header_card {
+          width: 85%;
+        }
+      }
+    }
+  }
+}
+/* ============= media query for 435px=============== */
+@media (width<= 435px) {
+  #contact_header {
+    .section-container {
+      .contact_header_cards {
+        grid-template-columns: 1fr;
+        .contact_header_card {
+          width: 95%;
+        }
+      }
+    }
+  }
+  /* =============== form =========== */
+  #contact_form_section {
+    .contact_form_bottom {
+      form {
+        .select_group {
+          #services {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
     }
   }
 }
