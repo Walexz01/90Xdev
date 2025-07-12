@@ -1,5 +1,33 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   document.fonts.ready.then(() => {
+    let navIcon = document.getElementById("navIcon");
+    let menuList = document.getElementById("menuList");
+    let links = document.querySelectorAll(".nav_links li a");
+    menuList.style.maxHeight = "0px";
+    menuList.style.padding = "0px";
+
+    navIcon.addEventListener("click", () => {
+      if (menuList.style.maxHeight == "0px") {
+        navIcon.src = "assets/icons8-close-window-100.png";
+        menuList.style.padding = "10px";
+        menuList.style.maxHeight = "400px";
+      } else {
+        navIcon.src = "assets/icons8-menu-squared-100.png";
+        menuList.style.maxHeight = "0px";
+        menuList.style.padding = "0px";
+      }
+    });
+
+    links.forEach((link, index) => {
+      link.addEventListener("click", () => {
+        if (menuList.style.maxHeight !== "0px") {
+          navIcon.src = "assets/icons8-menu-squared-100.png";
+          menuList.style.maxHeight = "0px";
+          menuList.style.padding = "0px";
+        }
+      });
+    });
+
     // gsap Code
     // nav header
     // makes the header clip and unclip

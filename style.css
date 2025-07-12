@@ -772,11 +772,33 @@ footer {
     nav {
       .section-container {
         .nav_left {
-          display: none;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          width: 100%;
+          background-color: var(--color-bg);
+          padding-block: 10px;
+          z-index: 11111;
+          transition: all 0.8s;
+          overflow: hidden;
+          & .nav_links {
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+
+            li {
+              padding: 20px;
+            }
+          }
         }
         .nav_toggle {
           display: inline-block;
           width: 60px;
+          z-index: 222222;
         }
       }
     }
