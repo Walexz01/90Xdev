@@ -1,6 +1,7 @@
 @import url(contact.css);
 @import url(services.css);
 @import url(projects.css);
+@import url(about.css);
 :root {
   /* 🔤 Font Families */
   --font-heading: "Sora", sans-serif;
